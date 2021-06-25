@@ -1,6 +1,10 @@
 @extends('layouts.app')
 
 @section('content')
+<head>
+    <title>reCAPTCHA demo: Simple page</title>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  </head>
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -49,10 +53,14 @@
                                     </label>
                                 </div>
                             </div>
+
                         </div>
+                        
 
                         <div class="form-group row mb-0">
+
                             <div class="col-md-8 offset-md-4">
+                                <div class="g-recaptcha" data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"></div>
                                 <button type="submit" class="btn btn-primary">
                                     {{ __('Login') }}
                                 </button>
@@ -64,10 +72,16 @@
                                 @endif
                             </div>
                         </div>
+                        
+
                     </form>
                 </div>
             </div>
         </div>
     </div>
 </div>
+<html>
+  
+  
+
 @endsection
